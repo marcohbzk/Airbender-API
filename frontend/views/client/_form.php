@@ -1,0 +1,39 @@
+<?php
+
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+
+/** @var yii\web\View $this */
+/** @var common\models\Client $model */
+/** @var yii\widgets\ActiveForm $form */
+?>
+
+<div class="client-form">
+
+    <?php $form = ActiveForm::begin(); ?>
+
+    <?= $form->field($model, 'user_id')->hiddenInput(['value' => Yii::$app->user->identity->getId()])->label(false) ?>
+
+    <?= $form->field($model, 'fName')->textInput() ?>
+
+    <?= $form->field($model, 'surname')->textInput() ?>
+
+    <?= $form->field($model, 'birthdate')->textInput() ?>
+
+    <?= $form->field($model, 'nif')->textInput(['maxlength' => 9]) ?>
+
+    <?= $form->field($model, 'phone')->textInput(['maxlength' => 9]) ?>
+
+    <?= $form->field($model, 'gender')->dropDownList([
+        'M' => 'Male',
+        'F' => 'Female'
+    ]) ?>
+
+
+    <div class="form-group">
+        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+    </div>
+
+    <?php ActiveForm::end(); ?>
+
+</div>

@@ -1,0 +1,15 @@
+suite_namespace: backend\tests\functional
+actor: FunctionalTester
+modules:
+  enabled:
+    - Yii2:
+        -configFile: "config/test.php"
+    - Db
+  config:
+    Db:
+      dsn: "mysql:host=localhost;dbname=airbender_test"
+      user: "marco"
+      password: "5610"
+      dump: "../sql/airbender_test.sql"
+      populate: true # run populator before all tests
+      cleanup: true # run populator before each test

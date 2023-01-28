@@ -1,0 +1,22 @@
+Balance req
+    get user balance req 
+    delete balance req
+Flights
+    get specific flight with airport arrival and departure
+Airports
+    Get all airports 
+Airports
+    Get specific airplane 
+Ticket
+    Get all user tickets
+    Create tickets
+    Delete tickets
+Receipts 
+    Get all user Receipts
+    Create Receipts
+    Delete Receipts
+Userdata
+    View user data
+    Update Userdata
+
+
